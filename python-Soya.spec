@@ -3,7 +3,7 @@ Summary:	A practical high-level object-oriented 3D engine for Python
 Summary(pl):	Praktyczny, wysokopoziomowy, zorientowany obiektowo silnik 3D dla Pythona
 Name:		python-%{module}
 Version:	0.9.2
-Release:	0.1
+Release:	0.2
 License:	GPL v2
 Group:		Development/Languages/Python
 Source0:	http://download.gna.org/soya/%{module}-%{version}.tar.bz2
@@ -47,11 +47,15 @@ python setup.py build
 %install
 rm -rf $RPM_BUILD_ROOT
 
+install -d $RPM_BUILD_ROOT%{_mandir}/man1
+
 python setup.py install \
 	--root=$RPM_BUILD_ROOT
 
 %py_ocomp $RPM_BUILD_ROOT%{py_sitedir}
 %py_comp $RPM_BUILD_ROOT%{py_sitedir}
+
+install manpage/man1/* $RPM_BUILD_ROOT%{_mandir}/man1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -66,3 +70,4 @@ rm -rf $RPM_BUILD_ROOT
 %{py_sitedir}/soya/data
 %dir %{py_sitedir}/soya/editor
 %{py_sitedir}/soya/editor/*.py[co]
+%{_mandir}/man1/*
