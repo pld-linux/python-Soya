@@ -8,6 +8,8 @@ License:	GPL v2
 Group:		Development/Languages/Python
 Source0:	http://download.gna.org/soya/%{module}-%{version}.tar.bz2
 # Source0-md5:	da59d3fa714076af9c03da6cbbdb5e86
+Source1:	http://download.gna.org/soya/SoyaTutorial-0.9.tar.bz2
+# Source1-md5:	
 URL:		http://oomadness.tuxfamily.org/en/soya/
 BuildRequires:	OpenGL-devel
 BuildRequires:	SDL-devel
@@ -16,15 +18,16 @@ BuildRequires:	cal3d-devel
 BuildRequires:	freetype-devel >= 2.0
 BuildRequires:	ncurses-devel
 BuildRequires:	ode-devel
+BuildRequires:	python-modules
 BuildRequires:	python-devel >= 2.2
 %pyrequires_eq	python
 Requires:	python-EditObj
 Requires:	python-Imaging
 Requires:	python-tkinter
+Obsoletes:	Soya
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_noautoreqdep	libGL.so.1 libGLU.so.1
-%define		_noreqdep	libGL.so.1 libGLU.so.1
 
 %description
 Soya 3D is a high level 3D engine for Python; it aims at being to 3D
@@ -38,15 +41,28 @@ najlepsze cechy programowania w Pythonie: ³atwo¶æ i ogromny potencja³.
 Zosta³ zaprojektowany z my¶l± o grach, skupiaj±c siê na wydajno¶ci
 oraz ³atwo¶ci w u¿yciu. Opiera siê na OpenGL, SDL i Cal3D.
 
+%package tutorial
+Summary:	Tutorial for Soya
+Summary(pl):	Tutorial dla Soya
+Group:		Development/Languages/Python
+URL:		http://oomadness.tuxfamily.org/en/soya_tuto/
+Requires:	%{name} = %{version}-%{release}
+Obsoletes:	Soya-tutorial
+
+%description tutorial
+Package contains a set of tutorial for Soya.
+
+%description tutorial -l pl
+Pakiet zawiera kompletny tutorial dla Soya.
+
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{module}-%{version} -a1
 
 %build
 python setup.py build
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT%{_mandir}/man1
 
 python setup.py install \
@@ -71,3 +87,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{py_sitedir}/soya/editor
 %{py_sitedir}/soya/editor/*.py[co]
 %{_mandir}/man1/*
+
+%files tutorial
+%defattr(644,root,root,755)
+%doc SoyaTutorial-0.9/{AUTHORS,README,tutorial}
