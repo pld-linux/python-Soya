@@ -9,7 +9,7 @@ Group:		Development/Languages/Python
 Source0:	http://download.gna.org/soya/%{module}-%{version}.tar.bz2
 # Source0-md5:	da59d3fa714076af9c03da6cbbdb5e86
 Source1:	http://download.gna.org/soya/SoyaTutorial-0.9.tar.bz2
-# Source1-md5:	
+# Source1-md5:	0b078cbd53a25c12a8bd0f974b2d4dc5
 URL:		http://oomadness.tuxfamily.org/en/soya/
 BuildRequires:	OpenGL-devel
 BuildRequires:	SDL-devel
