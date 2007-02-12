@@ -1,6 +1,6 @@
 %define		module	Soya
 Summary:	A practical high-level object-oriented 3D engine for Python
-Summary(pl):	Praktyczny, wysokopoziomowy, zorientowany obiektowo silnik 3D dla Pythona
+Summary(pl.UTF-8):   Praktyczny, wysokopoziomowy, zorientowany obiektowo silnik 3D dla Pythona
 Name:		python-%{module}
 Version:	0.9.2
 Release:	0.2
@@ -35,15 +35,15 @@ what Python is to programming: easy and powerful. It is designed with
 games in mind, focusing both on performance and ease-of-use. It relies
 on OpenGL, SDL and Cal3D.
 
-%description -l pl
-Soya 3D jest wysokopoziomowym silnikiem 3D dla Pythona, zachowuj±cym
-najlepsze cechy programowania w Pythonie: ³atwo¶æ i ogromny potencja³.
-Zosta³ zaprojektowany z my¶l± o grach, skupiaj±c siê na wydajno¶ci
-oraz ³atwo¶ci w u¿yciu. Opiera siê na OpenGL, SDL i Cal3D.
+%description -l pl.UTF-8
+Soya 3D jest wysokopoziomowym silnikiem 3D dla Pythona, zachowujÄ…cym
+najlepsze cechy programowania w Pythonie: Å‚atwoÅ›Ä‡ i ogromny potencjaÅ‚.
+ZostaÅ‚ zaprojektowany z myÅ›lÄ… o grach, skupiajÄ…c siÄ™ na wydajnoÅ›ci
+oraz Å‚atwoÅ›ci w uÅ¼yciu. Opiera siÄ™ na OpenGL, SDL i Cal3D.
 
 %package tutorial
 Summary:	Tutorial for Soya
-Summary(pl):	Tutorial dla Soya
+Summary(pl.UTF-8):   Tutorial dla Soya
 Group:		Development/Languages/Python
 URL:		http://oomadness.tuxfamily.org/en/soya_tuto/
 Requires:	%{name} = %{version}-%{release}
@@ -52,7 +52,7 @@ Obsoletes:	Soya-tutorial
 %description tutorial
 Package contains a set of tutorial for Soya.
 
-%description tutorial -l pl
+%description tutorial -l pl.UTF-8
 Pakiet zawiera kompletny tutorial dla Soya.
 
 %prep
