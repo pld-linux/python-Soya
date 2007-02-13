@@ -1,6 +1,6 @@
 %define		module	Soya
 Summary:	A practical high-level object-oriented 3D engine for Python
-Summary(pl.UTF-8):   Praktyczny, wysokopoziomowy, zorientowany obiektowo silnik 3D dla Pythona
+Summary(pl.UTF-8):	Praktyczny, wysokopoziomowy, zorientowany obiektowo silnik 3D dla Pythona
 Name:		python-%{module}
 Version:	0.9.2
 Release:	0.2
@@ -43,7 +43,7 @@ oraz łatwości w użyciu. Opiera się na OpenGL, SDL i Cal3D.
 
 %package tutorial
 Summary:	Tutorial for Soya
-Summary(pl.UTF-8):   Tutorial dla Soya
+Summary(pl.UTF-8):	Tutorial dla Soya
 Group:		Development/Languages/Python
 URL:		http://oomadness.tuxfamily.org/en/soya_tuto/
 Requires:	%{name} = %{version}-%{release}
