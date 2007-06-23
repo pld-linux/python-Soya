@@ -2,27 +2,29 @@
 Summary:	A practical high-level object-oriented 3D engine for Python
 Summary(pl.UTF-8):	Praktyczny, wysokopoziomowy, zorientowany obiektowo silnik 3D dla Pythona
 Name:		python-%{module}
-Version:	0.9.2
-Release:	0.2
-License:	GPL v2
+Version:	0.13.1
+Release:	0.1
+License:	GPL v2+
 Group:		Development/Languages/Python
 Source0:	http://download.gna.org/soya/%{module}-%{version}.tar.bz2
-# Source0-md5:	da59d3fa714076af9c03da6cbbdb5e86
-Source1:	http://download.gna.org/soya/SoyaTutorial-0.9.tar.bz2
-# Source1-md5:	0b078cbd53a25c12a8bd0f974b2d4dc5
+# Source0-md5:	258c6fec1862e0ba04b164f7afd3f5a0
+Source1:	http://download.gna.org/soya/SoyaTutorial-0.13.tar.bz2
+# Source1-md5:	80f864e56f6b293c73182e2273a78a1b
 URL:		http://oomadness.tuxfamily.org/en/soya/
 BuildRequires:	OpenGL-devel
 BuildRequires:	SDL-devel
-BuildRequires:	XFree86-devel
+#BuildRequires:	XFree86-devel
 BuildRequires:	cal3d-devel
 BuildRequires:	freetype-devel >= 2.0
+BuildRequires:	glew-devel
 BuildRequires:	ncurses-devel
 BuildRequires:	ode-devel
+BuildRequires:	python-Pyrex
 BuildRequires:	python-modules
 BuildRequires:	python-devel >= 2.2
 %pyrequires_eq	python
 Requires:	python-EditObj
-Requires:	python-Imaging
+Requires:	python-PIL
 Requires:	python-tkinter
 Obsoletes:	Soya
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -90,4 +92,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %files tutorial
 %defattr(644,root,root,755)
-%doc SoyaTutorial-0.9/{AUTHORS,README,tutorial}
+%doc SoyaTutorial-0.13/{AUTHORS,README,tutorial}
