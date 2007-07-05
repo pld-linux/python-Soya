@@ -10,7 +10,7 @@ Source0:	http://download.gna.org/soya/%{module}-%{version}.tar.bz2
 # Source0-md5:	258c6fec1862e0ba04b164f7afd3f5a0
 Source1:	http://download.gna.org/soya/SoyaTutorial-0.13.tar.bz2
 # Source1-md5:	80f864e56f6b293c73182e2273a78a1b
-URL:		http://oomadness.tuxfamily.org/en/soya/
+URL:		http://home.gna.org/oomadness/en/soya3d/index.html
 BuildRequires:	OpenGL-devel
 BuildRequires:	SDL-devel
 #BuildRequires:	XFree86-devel
@@ -47,7 +47,7 @@ oraz łatwości w użyciu. Opiera się na OpenGL, SDL i Cal3D.
 Summary:	Tutorial for Soya
 Summary(pl.UTF-8):	Tutorial dla Soya
 Group:		Development/Languages/Python
-URL:		http://oomadness.tuxfamily.org/en/soya_tuto/
+URL:		http://home.gna.org/oomadness/en/soya3d/tutorials/index.html
 Requires:	%{name} = %{version}-%{release}
 Obsoletes:	Soya-tutorial
 
