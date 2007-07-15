@@ -2,18 +2,18 @@
 Summary:	A practical high-level object-oriented 3D engine for Python
 Summary(pl.UTF-8):	Praktyczny, wysokopoziomowy, zorientowany obiektowo silnik 3D dla Pythona
 Name:		python-%{module}
-Version:	0.13.1
-Release:	0.2
+Version:	0.13.2
+Release:	0.1
 License:	GPL v2+
 Group:		Development/Languages/Python
 Source0:	http://download.gna.org/soya/%{module}-%{version}.tar.bz2
-# Source0-md5:	258c6fec1862e0ba04b164f7afd3f5a0
+# Source0-md5:	98c129c2797bf2e5a36e3cd8d40fb189
 Source1:	http://download.gna.org/soya/SoyaTutorial-0.13.tar.bz2
 # Source1-md5:	80f864e56f6b293c73182e2273a78a1b
 URL:		http://home.gna.org/oomadness/en/soya3d/index.html
 BuildRequires:	OpenGL-devel
+BuildRequires:	OpenAL-devel
 BuildRequires:	SDL-devel
-#BuildRequires:	XFree86-devel
 BuildRequires:	cal3d-devel >= 0.10.0
 BuildRequires:	freetype-devel >= 2.0
 BuildRequires:	glew-devel
@@ -25,7 +25,6 @@ BuildRequires:	python-devel >= 2.4
 %pyrequires_eq	python
 Requires:	python-EditObj
 Requires:	python-PIL
-Requires:	python-tkinter
 Obsoletes:	Soya
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
