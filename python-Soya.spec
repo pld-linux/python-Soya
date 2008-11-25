@@ -1,16 +1,19 @@
+#
+# TODO: unpackaged files
+#
 %define		module	Soya
 Summary:	A practical high-level object-oriented 3D engine for Python
 Summary(pl.UTF-8):	Praktyczny, wysokopoziomowy, zorientowany obiektowo silnik 3D dla Pythona
 Name:		python-%{module}
-Version:	0.13.2
+Version:	0.14
 Release:	0.1
 License:	GPL v2+
 Group:		Development/Languages/Python
 Source0:	http://download.gna.org/soya/%{module}-%{version}.tar.bz2
-# Source0-md5:	98c129c2797bf2e5a36e3cd8d40fb189
-Source1:	http://download.gna.org/soya/SoyaTutorial-0.13.tar.bz2
-# Source1-md5:	80f864e56f6b293c73182e2273a78a1b
-URL:		http://home.gna.org/oomadness/en/soya3d/index.html
+# Source0-md5:	9fa56b14d3e9d5fcee073de650b3206f
+Source1:	http://download.gna.org/soya/SoyaTutorial-%{version}.tar.bz2
+# Source1-md5:	241d4e56e21cf70487323b3b25f9c37c
+URL:		http://home.gna.org/oomadness/en/soya3d/
 BuildRequires:	OpenGL-devel
 BuildRequires:	OpenAL-devel
 BuildRequires:	SDL-devel
@@ -22,6 +25,7 @@ BuildRequires:	ode-devel >= 0.7
 BuildRequires:	python-Pyrex
 BuildRequires:	python-modules >= 0.9.3
 BuildRequires:	python-devel >= 2.4
+BuilDrequires:	rpm-pythonprov
 %pyrequires_eq	python
 Requires:	python-EditObj
 Requires:	python-PIL
@@ -54,19 +58,19 @@ Obsoletes:	Soya-tutorial
 Package contains a set of tutorial for Soya.
 
 %description tutorial -l pl.UTF-8
-Pakiet zawiera kompletny tutorial dla Soya.
+Pakiet zawiera kompletny przewodnik dla Soya.
 
 %prep
 %setup -q -n %{module}-%{version} -a1
 
 %build
-python setup.py build
+%{__python} setup.py build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_mandir}/man1
 
-python setup.py install \
+%{__python} setup.py install \
 	--root=$RPM_BUILD_ROOT
 
 %py_ocomp $RPM_BUILD_ROOT%{py_sitedir}
@@ -87,8 +91,9 @@ rm -rf $RPM_BUILD_ROOT
 %{py_sitedir}/soya/data
 %dir %{py_sitedir}/soya/editor
 %{py_sitedir}/soya/editor/*.py[co]
-%{_mandir}/man1/*
+%{py_sitedir}/*.egg-info
+%{_mandir}/man1/soya_editor.*
 
 %files tutorial
 %defattr(644,root,root,755)
-%doc SoyaTutorial-0.13/{AUTHORS,README,tutorial}
+%doc SoyaTutorial-%{version}/{AUTHORS,README,tutorial}
