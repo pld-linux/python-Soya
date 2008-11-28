@@ -27,7 +27,7 @@ BuildRequires:	python-modules >= 0.9.3
 BuildRequires:	python-devel >= 2.4
 BuilDrequires:	rpm-pythonprov
 %pyrequires_eq	python
-Requires:	python-EditObj
+Requires:	python-EditObj2
 Requires:	python-PIL
 Obsoletes:	Soya
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
