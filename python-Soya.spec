@@ -78,6 +78,8 @@ install -d $RPM_BUILD_ROOT%{_mandir}/man1
 
 install manpage/man1/* $RPM_BUILD_ROOT%{_mandir}/man1
 
+%py_postclean
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
