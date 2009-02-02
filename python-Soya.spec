@@ -14,8 +14,8 @@ Source0:	http://download.gna.org/soya/%{module}-%{version}.tar.bz2
 Source1:	http://download.gna.org/soya/SoyaTutorial-%{version}.tar.bz2
 # Source1-md5:	241d4e56e21cf70487323b3b25f9c37c
 URL:		http://home.gna.org/oomadness/en/soya3d/
-BuildRequires:	OpenGL-devel
 BuildRequires:	OpenAL-devel
+BuildRequires:	OpenGL-devel
 BuildRequires:	SDL-devel
 BuildRequires:	cal3d-devel >= 0.10.0
 BuildRequires:	freetype-devel >= 2.0
@@ -23,9 +23,10 @@ BuildRequires:	glew-devel
 BuildRequires:	ncurses-devel
 BuildRequires:	ode-devel >= 0.7
 BuildRequires:	python-Pyrex
-BuildRequires:	python-modules >= 0.9.3
 BuildRequires:	python-devel >= 2.4
+BuildRequires:	python-modules >= 0.9.3
 BuilDrequires:	rpm-pythonprov
+BuildRequires:	rpmbuild(macros) >= 1.219
 %pyrequires_eq	python
 Requires:	python-EditObj2
 Requires:	python-PIL
@@ -42,9 +43,10 @@ on OpenGL, SDL and Cal3D.
 
 %description -l pl.UTF-8
 Soya 3D jest wysokopoziomowym silnikiem 3D dla Pythona, zachowującym
-najlepsze cechy programowania w Pythonie: łatwość i ogromny potencjał.
-Został zaprojektowany z myślą o grach, skupiając się na wydajności
-oraz łatwości w użyciu. Opiera się na OpenGL, SDL i Cal3D.
+najlepsze cechy programowania w Pythonie: łatwość i ogromny
+potencjał. Został zaprojektowany z myślą o grach, skupiając się
+na wydajności oraz łatwości w użyciu. Opiera się na OpenGL, SDL i
+Cal3D.
 
 %package tutorial
 Summary:	Tutorial for Soya
