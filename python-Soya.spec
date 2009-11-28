@@ -1,12 +1,10 @@
 #
-# TODO: unpackaged files
-#
 %define		module	Soya
 Summary:	A practical high-level object-oriented 3D engine for Python
 Summary(pl.UTF-8):	Praktyczny, wysokopoziomowy, zorientowany obiektowo silnik 3D dla Pythona
 Name:		python-%{module}
 Version:	0.14
-Release:	0.1
+Release:	1
 License:	GPL v2+
 Group:		Development/Languages/Python
 Source0:	http://download.gna.org/soya/%{module}-%{version}.tar.bz2
@@ -93,8 +91,20 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{py_sitedir}/soya/*.so
 %{py_sitedir}/soya/*.py[co]
 %{py_sitedir}/soya/data
+%dir %{py_sitedir}/soya/blendercal
+%{py_sitedir}/soya/blendercal/*.py[co]
 %dir %{py_sitedir}/soya/editor
 %{py_sitedir}/soya/editor/*.py[co]
+%dir %{py_sitedir}/soya/gui
+%{py_sitedir}/soya/gui/*.py[co]
+%dir %{py_sitedir}/soya/pudding
+%{py_sitedir}/soya/pudding/*.py[co]
+%dir %{py_sitedir}/soya/pudding/ext
+%{py_sitedir}/soya/pudding/ext/*.py[co]
+%dir %{py_sitedir}/soya/pudding/styles
+%{py_sitedir}/soya/pudding/styles/*.py[co]
+%dir %{py_sitedir}/soya/tofu
+%{py_sitedir}/soya/tofu/*.py[co]
 %{py_sitedir}/*.egg-info
 %{_mandir}/man1/soya_editor.*
 
