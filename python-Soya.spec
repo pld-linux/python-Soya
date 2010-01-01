@@ -23,7 +23,7 @@ BuildRequires:	ode-devel >= 0.7
 BuildRequires:	python-Pyrex
 BuildRequires:	python-devel >= 2.4
 BuildRequires:	python-modules >= 0.9.3
-BuilDrequires:	rpm-pythonprov
+BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
 %pyrequires_eq	python
 Requires:	python-EditObj2
