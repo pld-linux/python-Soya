@@ -4,7 +4,7 @@ Summary:	A practical high-level object-oriented 3D engine for Python
 Summary(pl.UTF-8):	Praktyczny, wysokopoziomowy, zorientowany obiektowo silnik 3D dla Pythona
 Name:		python-%{module}
 Version:	0.14
-Release:	2
+Release:	3
 License:	GPL v2+
 Group:		Development/Languages/Python
 Source0:	http://download.gna.org/soya/%{module}-%{version}.tar.bz2
