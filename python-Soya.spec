@@ -24,7 +24,7 @@ BuildRequires:	python-Pyrex
 BuildRequires:	python-devel >= 2.4
 BuildRequires:	python-modules >= 0.9.3
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	rpmbuild(macros) >= 1.710
 %pyrequires_eq	python
 Requires:	python-EditObj2
 Requires:	python-PIL
